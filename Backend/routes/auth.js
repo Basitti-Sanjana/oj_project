@@ -33,6 +33,7 @@ router.post('/createuser', [
             name: req.body.name,
             email: req.body.email,
             password: secPass,
+            role:req.body.role,
         })
         const data = {
             user: {
@@ -41,8 +42,7 @@ router.post('/createuser', [
         }
         const authToken = jwt.sign(data, JWT_SECRET);
         success=true;
-        // res.json(user)
-        res.json({ success,authToken });
+        res.json({ success,authToken});
 
     } catch (error) {
         console.error(error.message);
@@ -83,13 +83,51 @@ router.post('/login', [
         res.status(500).send("Internal server error");
     }
 })
-//Route 3: Get loggedin  User Details using :POST "/api/auth/getuser". Login required
+//Route 3: Get loggedin  User Profile Details using :POST "/api/auth/getuser". Login required ->Give auth-token in the headers.
 router.post('/getuser',fetchuser,async (req, res) => {
     try {
         userId=req.user.id;
         const user=await User.findById(userId).select("-password");
         res.send(user);
         
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Internal server error");
+    }
+})
+
+//Route 4: Authentcate a user using :POST "/api/auth/loginAdmin". No login required
+router.post('/loginAdmin', [
+    body('email', 'Enter a valid email').isEmail(),
+    body('password', 'password cannot be blank').notEmpty(),
+], async (req, res) => {
+    let success=false;
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+        return res.status(400).json({ errors: result.array() });
+    }
+    const { email, password } = req.body;
+    try {
+        let user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({ success,error: "Please try to login with correct credentials" })
+        }
+        if (user.role!="admin") {
+            return res.status(404).json({ errors : "You are not admin" });
+          }
+        const passwordCompare = await bcrypt.compare(password, user.password);
+
+        if (!passwordCompare) {
+            return res.status(400).json({ success,error: "Please try to login with correct credentials" })
+        }
+        const data = {
+            user: {
+                id: user.id
+            }
+        }
+        const authToken = jwt.sign(data, JWT_SECRET);
+        success=true;
+        res.json({ success,authToken});
     } catch (error) {
         console.error(error.message);
         res.status(500).send("Internal server error");

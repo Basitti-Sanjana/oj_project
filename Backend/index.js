@@ -8,8 +8,8 @@ app.use(cors())
 app.use(express.json())
 //Available routes
 app.use('/api/auth',require('./routes/auth'))
-app.use('/api/notes',require('./routes/notes'))
+
 
 app.listen(port, () => {
-  console.log(`iNotebook backend listening on port http://localhost:${port}`)
+  console.log(`OnlineJudge backend listening on port http://localhost:${port}`)
 })
