@@ -42,7 +42,7 @@ const NavBar = (props) => {
                                     </li>
                                     {isAdmin && (
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/admin">Create Questions</Link>
+                                            <Link className="nav-link" to="/createQuestions">Create Questions</Link>
                                         </li>
                                     )}
                                     <li className="nav-item">

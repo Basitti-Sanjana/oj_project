@@ -40,7 +40,7 @@ const Login = (props) => {
             
             // Check if the logged-in user is an admin
             if (userData.role === 'admin') {
-                nav('/admin'); // Redirect to admin user page
+                nav('/createQuestions'); // Redirect to admin user page
             } else {
                 nav('/'); // Redirect to default page
             }
