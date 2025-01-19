@@ -21,16 +21,16 @@ OnlineJudge is a robust platform designed for coding enthusiasts and competitive
 ## Screenshots
 
 ### OnlineJudge Login
-![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
+![image alt](https://github.com/Basitti-Sanjana/oj_project/blob/7d2518736c0e59fcdc470b4bcb25c06d1992463c/OnlineJudgeLogin.png)
 
 ### OnlineJudge Signup
-![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
+![image alt](https://github.com/Basitti-Sanjana/oj_project/blob/7d2518736c0e59fcdc470b4bcb25c06d1992463c/OnlineJudgeSignUp.png)
 
 ### OnlineJudge Questions
-![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
+![image alt](https://github.com/Basitti-Sanjana/oj_project/blob/7d2518736c0e59fcdc470b4bcb25c06d1992463c/OnlineJudge_Questions.png)
 
 ### OnlineJudge New Question
-![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
+![image alt](https://github.com/Basitti-Sanjana/oj_project/blob/7d2518736c0e59fcdc470b4bcb25c06d1992463c/OnlineJudge_CreateNewQuestion.png)
 
 ## Installation and Setup
 
