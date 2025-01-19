@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# OnlineJudge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OnlineJudge is a robust platform designed for coding enthusiasts and competitive programmers. It provides a seamless experience for solving coding problems, compiling solutions in multiple programming languages, and managing questions effectively. With its powerful compiler supporting languages like Java, Python, C++, and more, OnlineJudge empowers users to practice and enhance their programming skills.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration for users.
+- **Multi-Language Compiler**: Supports popular programming languages like Java, Python, C++, and others.
+- **Create and Manage Questions**: Easily create, update, and manage coding problems.
+- **Real-Time Code Execution**: Compile and run code with instant feedback.
+- **Responsive UI**: Optimized for devices of all screen sizes.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js
+- **Backend**: Node.js with Express.js
+- **Database**: MongoDB
+- **Compiler**: Custom implementation for multi-language support
+- **Authentication**: JSON Web Tokens (JWT)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+### OnlineJudge Login
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### OnlineJudge Signup
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
 
-### `npm run build`
+### OnlineJudge Questions
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### OnlineJudge New Question
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these steps to set up the project on your local machine:
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ensure you have the following installed:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+- A package manager (npm or yarn)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Steps
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**:
 
-## Learn More
+   ```bash
+   git clone https://github.com/your-username/OnlineJudge.git
+   cd OnlineJudge
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install dependencies**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Navigate to the root directory and install backend dependencies:
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Then navigate to the `client` folder and install frontend dependencies:
 
-### Analyzing the Bundle Size
+   ```bash
+   cd client
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Set up environment variables**:
 
-### Making a Progressive Web App
+   Create a `.env` file in the root directory and add the following variables:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```env
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```
 
-### Advanced Configuration
+4. **Start the application**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   - To start the backend:
 
-### Deployment
+     ```bash
+     npm start
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   - To start the frontend:
 
-### `npm run build` fails to minify
+     ```bash
+     cd client
+     npm start
+     ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   The app will be accessible at `http://localhost:3000` (frontend) and `http://localhost:5000` (backend).
+
+## How to Use
+
+1. **Sign Up or Log In**:
+   - Navigate to the login or signup page.
+   - Create an account or log in with your credentials.
+
+2. **Browse Questions**:
+   - View all available coding problems on the Questions page.
+   - Select a question to view its details and solve it.
+
+3. **Submit Solutions**:
+   - Write your code in the editor provided.
+   - Select your preferred programming language.
+   - Click "Run" or "Submit" to compile and test your solution.
+
+4. **Create New Questions**:
+   - Navigate to the "New Question" section.
+   - Add question details like title, description, input format, and expected output.
+   - Save the question for others to solve.
+
+5. **Log Out**:
+   - Click the "Log Out" button to securely end your session.
+
+## Folder Structure
+
+```
+OnlineJudge
+├── client          # Frontend code
+│   ├── public      # Static files
+│   └── src         # React components and assets
+├── server          # Backend code
+│   ├── models      # MongoDB models
+│   ├── routes      # Express routes
+│   └── controllers # Logic for route handling
+├── .env.example    # Example environment file
+├── package.json    # Backend dependencies
+└── README.md       # Project documentation
+```
+
+## Features in Progress
+
+- Leaderboard for tracking user performance.
+- Enhanced test case management for questions.
+- Integration with external coding APIs.
+- Dark mode support.
+
+
